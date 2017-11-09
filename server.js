@@ -23,6 +23,9 @@ app.get('*', function(req,res){
 	res.sendFile(__dirname + '/frontend/index.html')
 })
 
+//routes
+app.use('/api/sendEmail', require('./backend/api/sendEmail'))
+
 app.listen(config.port, function(err){
 	if(err){
 		console.log(err)

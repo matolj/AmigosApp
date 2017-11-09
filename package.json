@@ -10,8 +10,11 @@
   "author": "Mate Oljica",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "morgan": "^1.9.0"
+    "fs": "0.0.1-security",
+    "morgan": "^1.9.0",
+    "nodemailer": "^4.3.1"
   }
 }

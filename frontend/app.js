@@ -1,1 +1,1 @@
-angular.module('AmigosApp', ['appRoutes', 'lndCtrl'])
+angular.module('AmigosApp', ['appRoutes', 'lndCtrl', 'logCtrl'])

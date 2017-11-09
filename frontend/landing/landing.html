@@ -17,8 +17,8 @@
 			<li><a href="#tf-team" class="page-scroll">Team</a></li>
 			<li><a href="#tf-services" class="page-scroll">Services</a></li>
 			<li><a href="#tf-works" class="page-scroll">Offers</a></li>
-			<li><a href="#tf-testimonials" class="page-scroll">Contact</a></li>
-			<li><a href="#tf-contact" class="page-scroll" style="color: red;">Login</a></li>
+			<li><a href="#tf-contact" class="page-scroll">Contact</a></li>
+			<li><a ui-sref="login" style="color: red;">Login</a></li>
 		  </ul>
 		</div>
 	</div>
@@ -38,7 +38,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<iframe width="520" height="315" src="https://www.youtube.com/embed/Ma-KLTn4mDc?autoplay=1&mute=1&rel=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
+					<iframe width="520" height="315" src="https://www.youtube.com/embed/Ma-KLTn4mDc?mute=1&rel=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="col-md-6">
 					<div class="about-text">
@@ -364,7 +364,9 @@
 							<hr>
 						</div>
 						<div class="clearfix"></div>
-						<small><em>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</em></small>            
+						<small><em>If you have any question, no problem we are there for you :). Feel free
+						to contact us. We will contact you as soon as we can :)
+						</em></small>            
 					</div>
 
 					<form>
@@ -372,22 +374,22 @@
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="exampleInputEmail1">Email address</label>
-									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" ng-model="question.email">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label for="exampleInputPassword1">Password</label>
-									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+									<label for="exampleInputPassword1">Name</label>
+									<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name" ng-model="question.name">
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Message</label>
-							<textarea class="form-control" rows="3"></textarea>
+							<textarea class="form-control" rows="3" ng-model="question.message"></textarea>
 						</div>
 						
-						<button type="submit" class="btn tf-btn btn-default">Submit</button>
+						<button type="submit" class="btn tf-btn btn-default" ng-click="sendEmail(question)">Send Email</button>
 					</form>
 
 				</div>
@@ -399,11 +401,11 @@
 	<nav id="footer">
 		<div class="container">
 			<div class="pull-left fnav">
-				<p>ALL RIGHTS RESERVED. COPYRIGHT © 2014. Designed by <a href="https://dribbble.com/shots/1817781--FREEBIE-Spirit8-Digital-agency-one-page-template">Robert Berki</a> and Coded by <a href="https://dribbble.com/jennpereira">Jenn Pereira</a></p>
+				<p>ALL RIGHTS RESERVED. COPYRIGHT © 2014. Designed by <a href="https://www.facebook.com/mate.oljica">Amigos</a> and Coded by <a href="https://www.facebook.com/mate.oljica">Mate Oljica</a></p>
 			</div>
 			<div class="pull-right fnav">
 				<ul class="footer-social">
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://www.facebook.com/mate.oljica"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
 					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
