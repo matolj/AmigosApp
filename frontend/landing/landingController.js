@@ -1,5 +1,8 @@
-angular.module('lndCtrl', [])
-.controller('landingController', ['$scope', '$http', function ($scope, $http){
+angular.module('lndCtrl', ['ngAnimate', 'toastr', 'angular-loading-bar'])
+.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+	cfpLoadingBarProvider.includeSpinner = false;
+ }])
+.controller('landingController', ['$scope', '$http','toastr', function ($scope, $http, toastr){
 	$scope.team = [
 		{
 			picture: "landing/img/team/01.jpg",
@@ -17,4 +20,14 @@ angular.module('lndCtrl', [])
 			proffesion: "woodMaster"
 		}
 	]
+
+	$scope.sendEmail = function(emailContent){
+		$http.post('/api/sendEmail', emailContent)
+		.then(function(response){
+			toastr.success(response.data.message)
+		})
+		.catch(function(err){
+			toastr.error(err.data)
+		})
+	}
 }])

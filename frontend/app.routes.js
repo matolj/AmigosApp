@@ -10,4 +10,9 @@ angular.module('appRoutes', ['ui.router'])
       		templateUrl: "landing/landing.html",
       		controller: "landingController"
     	})
+    	.state('login', {
+      		url: "/login",
+      		templateUrl: "login/login.html",
+      		controller: "loginController"
+    	})
 })
